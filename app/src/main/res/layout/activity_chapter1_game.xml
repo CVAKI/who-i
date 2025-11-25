@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#87CEEB"
+    tools:context=".Chapter1GameActivity">
+
+    <!-- Game View - Full screen -->
+
+    <!-- Minimal Top Info Bar -->
+
+    <com.humangodcvaki.whoi.GameView
+        android:id="@+id/gameView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#87CEEB" />
+
+    <LinearLayout
+        android:id="@+id/gameInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:background="#80000000"
+        android:gravity="center_vertical">
+
+        <!-- Timer -->
+        <TextView
+            android:id="@+id/timerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Status Text -->
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Race to the Green Door!"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:gravity="center" />
+
+        <!-- Score -->
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Me: 0 | Friend: 0"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp" />
+
+        <!-- Pause Button -->
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="32dp"
+            android:layout_height="20dp"
+            android:text="||"
+            android:textSize="8sp"
+            android:layout_marginStart="8dp"
+            android:background="#80FFFFFF"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <!-- Player Status Strip (very minimal) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gameInfoLayout"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:background="#60000000">
+
+        <TextView
+            android:id="@+id/player1StatusText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Me: 0%"
+            android:textColor="#90EE90"
+            android:textSize="9sp"
+            android:gravity="start" />
+
+        <TextView
+            android:id="@+id/player2StatusText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Friend: 0%"
+            android:textColor="#FFB6C1"
+            android:textSize="9sp"
+            android:gravity="end" />
+
+    </LinearLayout>
+
+    <!-- Left Movement Button -->
+
+    <!-- Right Movement Button -->
+
+    <ImageButton
+        android:id="@+id/btnLeft"
+        android:layout_width="72dp"
+        android:layout_height="71dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="18dp"
+        android:alpha="0.8"
+        android:background="@drawable/control_button_dark"
+        android:contentDescription="Move Left"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_arrow_left_white" />
+
+    <!-- Jump Button -->
+
+    <ImageButton
+        android:id="@+id/btnRight"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="18dp"
+        android:layout_toEndOf="@+id/btnLeft"
+        android:alpha="0.8"
+        android:background="@drawable/control_button_dark"
+        android:contentDescription="Move Right"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_arrow_right_white" />
+
+    <ImageButton
+        android:id="@+id/btnJump"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/control_button_dark"
+        android:src="@drawable/ic_arrow_up_white"
+        android:contentDescription="Jump"
+        android:scaleType="centerInside"
+        android:alpha="0.8" />
+
+</RelativeLayout>
